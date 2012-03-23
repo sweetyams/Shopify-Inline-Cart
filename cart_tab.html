@@ -1,0 +1,14 @@
+<div id="cart_tab">
+    <ul>          
+	<li class="cart-link cart_click">
+	  <a class="num-items-in-cart cart_click">
+	    <span class="icon">
+	      {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }}
+            </span>
+          </a>             
+	</li>
+	<li class="checkout-link">
+	  <a href="/cart" >Checkout</a>              
+	</li>
+    </ul>
+</div><!-- /#cart_tab -->

@@ -5,14 +5,12 @@ This is a git repository for the files and way to setup an inline cart in Shopif
 well documented on Shopify Forums:
 http://forums.shopify.com/categories/2/posts/67681
 
-_____________________________________________________________________________________________________________
 
 ## 1. An add to cart button:
 
 This is pretty standard (style it however you want):
     <input type="submit" name="add" id="add-to-cart" value="Add to Cart" />
   
-_____________________________________________________________________________________________________________
 
 ## 2. inline-cart.liquid
 
@@ -24,7 +22,6 @@ This will be called from your theme.liquid file like this:
 The cart-top and cart-bottom divs allow for the space between top and bottom of cart. Style to your hearts content.
 
 
-_____________________________________________________________________________________________________________
 
 ## 3. cart_tab.html
 
@@ -36,7 +33,6 @@ This is made possibly by a placeholder div that gets content written into it!
 
     <div id="add-to-cart-msg"></div>
 
-_____________________________________________________________________________________________________________
 
 ## 4. inlineCart.js
 
@@ -45,7 +41,6 @@ Add jquery.inlineCart.js to your assets folder, for me called like this in theme
     {{ 'monolitho.js' | asset_url | script_tag }} 
 
 
-_____________________________________________________________________________________________________________
 
 ## 5 . jquery.hideIinlineCart.js
 

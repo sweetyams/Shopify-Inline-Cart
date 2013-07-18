@@ -43,12 +43,12 @@ function updateCartaddNote(note, callback) {
 
 //REMOVING AN ITEM (the X after an item)
 function removecartitem(id) {
-  var variant_id = (id);
+  var cart_line_item = (id);
 
   $.ajax({ 
     type: 'POST',
     url: '/cart/change.js',
-    data:  'quantity=0&id='+variant_id,
+    data:  'quantity=0&line='+cart_line_item,
     async: false, 
     cache: false, 
     dataType: 'json',

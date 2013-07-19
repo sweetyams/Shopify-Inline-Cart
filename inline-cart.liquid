@@ -35,7 +35,7 @@
 	      <tr id="product-{{ item.id }}" class="{{ item.product.handle }} item">
 			
 		    <td id='invisible' class="cart_amount cartvis"> <!-- FOR THE FUTURE -->
-			  <input class="text" type="text" size="4" name="updates[{{item.variant.id}}]" id="updates_{{item.variant.id}}" value="{{ item.quantity }}" onfocus="this.select();" class="replace" /> 
+			  <input class="text" type="text" size="4" name="updates[{{forloop.index}}]" id="updates_{{forloop.index}}" value="{{ item.quantity }}" onfocus="this.select();" class="replace" /> 
 			</td>
 			
 		 	<td class="cart_image">
@@ -52,7 +52,7 @@
 			  <span class="quantity">{{ item.quantity }}</span> x {{ item.price | money }}
 			</td>
 	            
-			<td class ="cart_remove"><a onClick="removecartitem({{item.variant.id}}); return false;">remove</a></td>
+			<td class ="cart_remove"><a onClick="removecartitem({{forloop.index}}); return false;">remove</a></td>
 	          
 		  </tr>
 	    {% endfor %}

@@ -101,8 +101,9 @@ function changeUpdatedCart(cart, cart_summary_id, cart_count_id) {
             var varsize = ('small');
             var matches = imageurl.match(/(.*\/[\w\-\_\.]+)\.(\w{2,4})/);
             var cartfinalimage =  (matches[1] + '_' + varsize + '.' + matches[2]);
+            var line_item = i+1;
 
-            $("<tr id='product-" + item.id + "' class='"+item.handle + " item'><td id='invisible' class='cart_amount'> <input class='text' type='text' size='4' name='updates"+item.id+"' id='updates_"+item.id+"' value='"+ item.quantity +"' onfocus='this.select();' class='replace' /> </td><td class='cart_image'><a href='"+ item.url +"'><img class='cartimage' src='"+ cartfinalimage +"'  alt='"+ item.title +"' /></a></td><td class='cart_title'> <a href='"+item.url +"'>"+ item.title +"</a></td><td class='cart_itemprice'><span class='quantity'>"+ item.quantity +"</span> x "+ monetizeitemprice +"</td><td class ='cart_remove'><a onClick='removecartitem("+item.id+"); return false;'>remove</a></td></tr>").appendTo(uc);
+            $("<tr id='product-" + item.id + "' class='"+item.handle + " item'><td id='invisible' class='cart_amount'> <input class='text' type='text' size='4' name='updates"+line_item+"' id='updates_"+line_item+"' value='"+ item.quantity +"' onfocus='this.select();' class='replace' /> </td><td class='cart_image'><a href='"+ item.url +"'><img class='cartimage' src='"+ cartfinalimage +"'  alt='"+ item.title +"' /></a></td><td class='cart_title'> <a href='"+item.url +"'>"+ item.title +"</a></td><td class='cart_itemprice'><span class='quantity'>"+ item.quantity +"</span> x "+ monetizeitemprice +"</td><td class ='cart_remove'><a onClick='removecartitem("+ line_item +"); return false;'>remove</a></td></tr>").appendTo(uc);
 
 
             });
